@@ -1,0 +1,4 @@
+{
+  "watch": ["src", "main.ts", "index.ts"],
+  "exec": "pnpm build & pnpm start"
+}
