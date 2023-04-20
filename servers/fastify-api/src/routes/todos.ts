@@ -1,11 +1,10 @@
-import { Router } from "../abstracts/abstractRouter";
+import { FastifyInstance } from "fastify";
 
-export class TodoRouter extends Router {
-  bootstrap() {
-    this.app.get("/todos", (req, res) => {
-      return {
-        result: [],
-      };
-    });
-  }
-}
+export const apiTodos = async (app: FastifyInstance) => {
+  app.get("/todos", function () {
+    // app.log.info("===reach", this.mongo.db?.collections());
+    return {
+      message: "get all todos",
+    };
+  });
+};

@@ -14,7 +14,8 @@
   "dependencies": {
     "@fastify/helmet": "^10.1.0",
     "@fastify/mongodb": "^7.0.0",
-    "fastify": "^4.15.0"
+    "fastify": "^4.15.0",
+    "mongodb": "^5.3.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

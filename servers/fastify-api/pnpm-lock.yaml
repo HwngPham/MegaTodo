@@ -10,6 +10,9 @@ dependencies:
   fastify:
     specifier: ^4.15.0
     version: 4.15.0
+  mongodb:
+    specifier: ^5.3.0
+    version: 5.3.0
 
 devDependencies:
   '@types/node':
@@ -57,7 +60,7 @@ packages:
     resolution: {integrity: sha512-NbneaY3iA+ZcWJWYObXVd+1tbBRqdA021h/hpyccd/dRMrvaKlGheVdmtGJFsHYw7lsJkTV+bciFrwi97JMYfg==}
     dependencies:
       fastify-plugin: 4.5.0
-      mongodb: 5.2.0
+      mongodb: 5.3.0
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
       - mongodb-client-encryption
@@ -431,12 +434,12 @@ packages:
       whatwg-url: 11.0.0
     dev: false
 
-  /mongodb@5.2.0:
-    resolution: {integrity: sha512-nLgo95eP1acvjBcOdrUV3aqpWwHZCZwhYA2opB8StybbtQL/WoE5pk92qUUfjbKOWcGLYJczTqQbfOQhYtrkKg==}
+  /mongodb@5.3.0:
+    resolution: {integrity: sha512-Wy/sbahguL8c3TXQWXmuBabiLD+iVmz+tOgQf+FwkCjhUIorqbAxRbbz00g4ZoN4sXIPwpAlTANMaGRjGGTikQ==}
     engines: {node: '>=14.20.1'}
     peerDependencies:
       '@aws-sdk/credential-providers': ^3.201.0
-      mongodb-client-encryption: ^2.3.0
+      mongodb-client-encryption: '>=2.3.0 <3'
       snappy: ^7.2.2
     peerDependenciesMeta:
       '@aws-sdk/credential-providers':

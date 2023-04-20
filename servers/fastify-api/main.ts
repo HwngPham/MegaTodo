@@ -1,14 +1,18 @@
 import Fastify, { FastifyInstance, RouteShorthandOptions } from "fastify";
 import helmet from "@fastify/helmet";
-import { TodoRouter } from "./src/routes/todos";
-import { HealthRouter } from "./src/routes/health";
+import { apiTodos } from "./src/routes/todos";
+import { apiHealth } from "./src/routes/health";
+import { database } from "./src/configs/database";
 
 export const createServer = (configs: RouteShorthandOptions = {}) => {
   const app: FastifyInstance = Fastify({});
-  app.register(helmet);
 
-  [new TodoRouter(app), new HealthRouter(app)].forEach((router) =>
-    router.bootstrap()
-  );
+  [
+    // plugins, routes, etc.
+    database,
+    helmet,
+    apiHealth,
+    apiTodos,
+  ].forEach((decorator) => app.register(decorator));
   return app;
 };

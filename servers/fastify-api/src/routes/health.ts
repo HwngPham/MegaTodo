@@ -1,9 +1,7 @@
-import { Router } from "../abstracts/abstractRouter";
+import { FastifyInstance } from "fastify";
 
-export class HealthRouter extends Router {
-  bootstrap() {
-    this.app.get("/ping", () => {
-      return { message: "pong" };
-    });
-  }
-}
+export const apiHealth = async (app: FastifyInstance) => {
+  app.get("/ping", () => {
+    return { message: "pong" };
+  });
+};
