@@ -6,13 +6,8 @@ import { database } from "./src/configs/database";
 
 export const createServer = (configs: RouteShorthandOptions = {}) => {
   const app: FastifyInstance = Fastify({});
+  const decorators = [database, helmet, apiHealth, apiTodos];
 
-  [
-    // plugins, routes, etc.
-    database,
-    helmet,
-    apiHealth,
-    apiTodos,
-  ].forEach((decorator) => app.register(decorator));
+  decorators.forEach((d) => app.register(d));
   return app;
 };

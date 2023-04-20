@@ -1,15 +1,18 @@
 import { FastifyInstance } from "fastify";
-import db from "@fastify/mongodb";
-import { MongoClient } from "mongodb";
+import { DataTypes, Sequelize } from "sequelize";
+
+export const dbClient = new Sequelize("sqlite::memory:");
+
+export const Todo = dbClient.define("Todos", {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+  content: DataTypes.STRING,
+  isDone: DataTypes.BOOLEAN,
+});
 
 export const database = async (app: FastifyInstance) => {
-  app.log.info("===init database..");
-  try {
-    const client = new MongoClient("mongodb://localhost:27017/test");
-    await client.connect();
-    const db = client.db("test");
-    app.log.info("===collections", db.collections());
-  } catch (e) {
-    app.log.error("==connect failed", e);
-  }
+  dbClient.sync();
 };
