@@ -1,6 +1,9 @@
 import strawberry
-from .health.query import HealthQuery
-from .todo.query import TodoQuery
+from .health.schema import HealthQuery
+from .todo.schema import TodoQuery, TodoMutation
+from .configs.db import init_db
+
+init_db()
 
 
 @strawberry.type
@@ -8,4 +11,9 @@ class RootQuery(TodoQuery, HealthQuery):
     pass
 
 
-schema = strawberry.Schema(query=RootQuery)
+@strawberry.type
+class RootMutation(TodoMutation):
+    pass
+
+
+schema = strawberry.Schema(query=RootQuery, mutation=TodoMutation)
