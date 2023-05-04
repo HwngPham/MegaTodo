@@ -1,4 +1,6 @@
-from django.urls import path
-from todo.urls import router
+from django.urls import path, include
 
-urlpatterns = [] + router.urls
+urlpatterns = [
+    path("graphql", include("graph.urls")),
+    path("todo", include("todo.urls")),
+]
