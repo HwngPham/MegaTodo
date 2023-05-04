@@ -8,6 +8,7 @@ django = "*"
 djangorestframework = "*"
 markdown = "*"
 graphene-django = "*"
+django-environ = "*"
 
 [dev-packages]
 
