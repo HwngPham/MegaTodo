@@ -1,5 +1,5 @@
 from graphene import *
-from .schemas.todo import TodoQuery, TodoMutation
+from .schemas.todo import TodoQuery, UpdateOrCreateTodoMutation, DeleteTodoMutation
 
 
 class RootQuery(TodoQuery):
@@ -7,7 +7,8 @@ class RootQuery(TodoQuery):
 
 
 class RootMutation(ObjectType):
-    create_todo = TodoMutation.Field()
+    update_or_create_todo = UpdateOrCreateTodoMutation.Field()
+    delete_todo = DeleteTodoMutation.Field()
 
 
 schema = Schema(query=RootQuery, mutation=RootMutation)

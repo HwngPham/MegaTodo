@@ -20,7 +20,19 @@ class TodoQuery(ObjectType):
         return Todo.objects.all()
 
 
-class TodoMutation(SerializerMutation):
+class DeleteTodoMutation(Mutation):
+    ok = Boolean()
+
+    class Arguments:
+        content = String()
+
+    @classmethod
+    def mutate(cls, root, info, content=None):
+        Todo.objects.filter(content=content).delete()
+        return cls(ok=True)
+
+
+class UpdateOrCreateTodoMutation(SerializerMutation):
     class Arguments:
         content = String(required=True)
         is_done = Boolean()
