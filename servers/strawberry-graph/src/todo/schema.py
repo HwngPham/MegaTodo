@@ -22,3 +22,7 @@ class TodoMutation:
         return update_todo(
             find_by_content=find_by_content, content=content, is_done=is_done
         )
+
+    @strawberry.mutation
+    def delete_todo(self, content: str) -> Todo:
+        return delete_todo(content=content)
