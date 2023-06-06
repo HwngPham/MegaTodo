@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify";
 import { DataTypes, Sequelize } from "sequelize";
 
-export const dbClient = new Sequelize("sqlite::memory:");
+export const dbClient = new Sequelize("sqlite:todo.db");
 
 export const Todo = dbClient.define("Todos", {
   id: {
