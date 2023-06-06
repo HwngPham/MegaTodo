@@ -1,18 +1,32 @@
-<template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="store.increase()">count is {{ store.count }}</button>
-    </div>
-</template>
-
-<style scoped>
-</style>
-
 <script setup lang="ts">
-import {store} from '@/store'
+import { Ref, ref, watch } from "vue";
+// import { store } from "#/store";
+import TodoItem from "./components/item.vue";
+import { gql, useQuery } from "@urql/vue";
 
-defineProps<{ msg: string }>()
+let allTodo: Ref<any> = ref([])
 
+const fetchAllTodo = useQuery({
+  query: gql`
+    query {
+      allTodo {
+        content
+        isDone
+      }
+    }
+  `,
+  pause: false,
+  requestPolicy: "network-only",
+});
+
+allTodo = fetchAllTodo.data;
+watch(allTodo, console.log);
 </script>
 
+<template>
+  <li v-for="item in allTodo">
+    <TodoItem :item="item" />
+  </li>
+</template>
+
+<style scoped></style>
