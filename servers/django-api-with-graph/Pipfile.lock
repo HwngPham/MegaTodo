@@ -25,19 +25,19 @@
         },
         "asgiref": {
             "hashes": [
-                "sha256:71e68008da809b957b7ee4b43dbccff33d1b23519fb8344e33f049897077afac",
-                "sha256:9567dfe7bd8d3c8c892227827c41cce860b368104c3431da67a0c5a65a949506"
+                "sha256:89b2ef2247e3b562a16eef663bc0e2e703ec6468e2fa8a5cd61cd449786d4f6e",
+                "sha256:9e0ce3aa93a819ba5b45120216b23878cf6e8525eb3848653452b4192b92afed"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==3.6.0"
+            "version": "==3.7.2"
         },
         "django": {
             "hashes": [
-                "sha256:066b6debb5ac335458d2a713ed995570536c8b59a580005acb0732378d5eb1ee",
-                "sha256:7efa6b1f781a6119a10ac94b4794ded90db8accbe7802281cd26f8664ffed59c"
+                "sha256:2a6b6fbff5b59dd07bef10bcb019bee2ea97a30b2a656d51346596724324badf",
+                "sha256:672b3fa81e1f853bb58be1b51754108ab4ffa12a77c06db86aa8df9ed0c46fe5"
             ],
             "index": "pypi",
-            "version": "==4.2.1"
+            "version": "==4.2.2"
         },
         "django-environ": {
             "hashes": [
@@ -64,11 +64,11 @@
         },
         "graphene-django": {
             "hashes": [
-                "sha256:895e0cf02d4264010a95dc1126cef920e137db31c8f09e5c9a96679dcecc0759",
-                "sha256:9e436cb5a6f5a4e88e2a426966e6bab418a6bd11bfb3a32996493f8f18dadf26"
+                "sha256:6df689056b2d3599e8ca5c96e7cd185927df307b5d3e817fdeedd00d40a52bbc",
+                "sha256:7d9215e952849d7c97984be0e4cfd0c35c32407bd96eedd13231a22b8f6e8e8a"
             ],
             "index": "pypi",
-            "version": "==3.0.2"
+            "version": "==3.1.1"
         },
         "graphql-core": {
             "hashes": [
@@ -112,7 +112,7 @@
                 "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
                 "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
             "version": "==1.16.0"
         },
         "sqlparse": {
@@ -129,6 +129,14 @@
                 "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"
             ],
             "version": "==1.3"
+        },
+        "typing-extensions": {
+            "hashes": [
+                "sha256:88a4153d8505aabbb4e13aacb7c486c2b4a33ca3b3f807914a9b4c844c471c26",
+                "sha256:d91d5919357fe7f681a9f2b5b4cb2a5f1ef0a1e9f59c4d8ff0d3491e05c0ffd5"
+            ],
+            "markers": "python_version < '3.11'",
+            "version": "==4.6.3"
         }
     },
     "develop": {}
