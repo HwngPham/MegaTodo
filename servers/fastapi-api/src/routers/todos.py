@@ -28,13 +28,15 @@ async def get_todo_by_id(id) -> TodoModelSchema:
 
 
 @router.patch("/{id}")
-async def update_todo(id) -> TodoModelSchema:
+async def update_todo(id, input: TodoInputSchema) -> TodoModelSchema:
     try:
         instance = Todo.get_by_id(id)
-        Todo.get_by_id(id)
-        return instance.dict()
     except:
         raise HTTPException(status_code=404, detail=f"Todo id={id} is not found")
+
+    instance.__dict__["__data__"].update(**input.dict())
+    instance.save()
+    return instance.dict()
 
 
 @router.delete("/{id}")
