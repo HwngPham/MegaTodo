@@ -9,6 +9,8 @@ djangorestframework = "*"
 markdown = "*"
 graphene-django = "*"
 django-environ = "*"
+gunicorn = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

@@ -5,6 +5,7 @@ COPY . /www/app
 
 ENV DJANGO_SETTINGS_MODULE=core.settings
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
 
 RUN pip install -r requirements.txt \
   && python manage.py makemigrations \
