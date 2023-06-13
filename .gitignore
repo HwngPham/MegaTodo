@@ -315,6 +315,7 @@ pyrightconfig.json
 # sqlite
 *.db
 *.sqlite3
+*.sqlite
 
 # vscode localsetting
 settings.json
