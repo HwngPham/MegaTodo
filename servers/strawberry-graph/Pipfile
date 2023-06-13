@@ -4,8 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-strawberry-graphql = {extras = ["debug-server"], version = "*"}
 peewee = "*"
+strawberry-graphql = {extras = ["asgi"], version = "*"}
+uvicorn = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

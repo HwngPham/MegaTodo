@@ -1,7 +1,7 @@
 from peewee import *
 
 
-db = SqliteDatabase("todo_db.db")
+db = SqliteDatabase("sqlite.db")
 
 
 class BaseModel(Model):
