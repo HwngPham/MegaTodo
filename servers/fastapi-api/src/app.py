@@ -5,7 +5,7 @@ from .models.todo import Todo
 
 
 def create_app(config={}):
-    db.connect()
+    db.connect(reuse_if_open=True)
     db.create_tables([Todo])
 
     app = FastAPI(**config)
