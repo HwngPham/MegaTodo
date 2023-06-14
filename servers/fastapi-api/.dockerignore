@@ -1,0 +1,8 @@
+.env.example
+db.sqlite3
+Dockerfile
+makefile
+README.md
+__pycache__
+Pipfile
+Pipfile.lock
