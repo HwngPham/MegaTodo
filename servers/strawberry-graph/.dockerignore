@@ -1,0 +1,7 @@
+.dockerignore
+.env.example
+Pipfile
+Pipfile.lock
+README.md
+sqlite.db
+__pycache__
