@@ -1,0 +1,8 @@
+build
+node_modules
+.env.example
+Dockerfile
+makefile
+nodemon.json
+README.md
+todo.db
