@@ -1,7 +1,7 @@
 FROM python:3.10-alpine
 
-WORKDIR /www/app
-COPY . /www/app
+WORKDIR /usr/www
+COPY . /usr/www
 
 ENV DJANGO_SETTINGS_MODULE=core.settings
 ENV PYTHONUNBUFFERED=1
