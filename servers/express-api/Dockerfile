@@ -3,7 +3,8 @@ WORKDIR /usr/build
 ENV HOST 0.0.0.0
 ENV PORT 8000
 COPY . .
-RUN npm i --omit=dev --package-lock=false
+RUN npm i -g pnpm
+RUN pnpm i --prod
 
 
 FROM node:18.16-alpine as runner
