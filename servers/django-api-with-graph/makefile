@@ -13,5 +13,5 @@ requirements:
 image:
 	make requirements && docker build . -t django-api-with-graph
 
-start_image:
-	docker run -dp 4000:4000 django-api-with-graph
+container:
+	docker run -dp 80:4000 django-api-with-graph
