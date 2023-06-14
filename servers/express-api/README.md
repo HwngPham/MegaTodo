@@ -1,3 +1,10 @@
+> Use either pm2 or containerized env but not both
+
+> Using 2-steps image reduce image from 232mb to 200mb
+
+> slim image is bigger than alpine about 30%
+
+
 Requirements
 
 - node >= 18.16
