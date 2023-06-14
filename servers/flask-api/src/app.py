@@ -12,4 +12,5 @@ def create_app():
         register_db(app)
         register_routes(app)
 
+    print(app.url_map)
     return app
