@@ -1,0 +1,5 @@
+.env.example
+db.sqlite
+Dockerfile
+makefile
+README.md
