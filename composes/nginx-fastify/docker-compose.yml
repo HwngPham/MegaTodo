@@ -1,0 +1,20 @@
+services:
+  web:
+    build: ../../servers/fastify-api
+    ports:
+      - 8000:8000
+    networks:
+      - webapp
+
+  proxy:
+    build: ../../gateways/nginx
+    ports:
+      - 80:80
+    networks:
+      - webapp
+    depends_on:
+      - web
+
+networks:
+  webapp:
+    driver: bridge
