@@ -4,12 +4,7 @@ import {
   getAllTodo,
   updateTodo,
 } from "../../../services";
-import {
-  EditableTodoFields,
-  MERGE_STATE,
-  StoreState,
-  Todo,
-} from "../constants";
+import { MERGE_STATE, StoreState, Todo } from "../constants";
 
 const initState = {
   todos: [],

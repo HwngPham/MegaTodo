@@ -1,11 +1,11 @@
 import { Button, Divider, useClickAway } from "@geist-ui/core";
-import { clsx } from "clsx";
-import { Todo } from "../../../hooks/store/constants";
+import { RiDeleteBin5Line } from "react-icons/ri";
 import { MouseEvent, useRef, useState } from "react";
+import { clsx } from "clsx";
+import { TiCancel } from "react-icons/ti";
+import { Todo } from "../../../hooks/store/constants";
 import { UpdateTodoForm } from "./UpdateTodoForm";
 import { useStore } from "../../../hooks/store";
-import { RiDeleteBin5Line } from "react-icons/ri";
-import { TiCancel } from "react-icons/ti";
 
 export interface TodoItemProps {
   todo: Todo;
@@ -50,9 +50,7 @@ export const TodoItem = ({ todo }: TodoItemProps) => {
         {editingTodo ? (
           <UpdateTodoForm todo={editingTodo} setEditingTodo={setEditingTodo} />
         ) : (
-          <p>
-            {todo.content}
-          </p>
+          <p>{todo.content}</p>
         )}
 
         <div>

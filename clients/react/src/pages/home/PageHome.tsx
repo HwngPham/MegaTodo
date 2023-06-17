@@ -1,7 +1,7 @@
+import { clsx } from "clsx";
 import { CreateTodoForm } from "./components/CreateTodoForm";
 import { ProgressBar } from "./components/ProgressBar";
 import { TodoList } from "./components/TodoList";
-import { clsx } from "clsx";
 
 export const PageHome = () => {
   return (

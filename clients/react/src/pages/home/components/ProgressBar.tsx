@@ -1,6 +1,6 @@
 import { Progress } from "@geist-ui/core";
-import { useStore } from "../../../hooks/store";
 import { useMemo } from "react";
+import { useStore } from "../../../hooks/store";
 
 export const ProgressBar = () => {
   const { todos } = useStore();

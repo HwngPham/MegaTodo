@@ -1,7 +1,7 @@
 import { Input } from "@geist-ui/core";
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useStore } from "../../../hooks/store";
 import { clsx } from "clsx";
+import { useStore } from "../../../hooks/store";
 
 export interface CreateTodoFormProps {}
 
