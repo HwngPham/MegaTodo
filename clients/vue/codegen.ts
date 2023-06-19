@@ -2,7 +2,8 @@ import type { CodegenConfig } from "@graphql-codegen/cli";
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: "http://localhost:4000",
+  // TODO: read uri from .env
+  schema: "http://localhost:8000",
   documents: ["src/**/*.vue"],
   ignoreNoDocuments: true,
   generates: {
