@@ -21,7 +21,10 @@
     "noFallthroughCasesInSwitch": true,
 
     // Alias
-    "types": [ "node" ],
+    "types": [
+      "node",
+      "element-plus/global"
+    ],
     "paths": {
       "#/*": ["./src/*"]
     }
