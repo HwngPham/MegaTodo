@@ -2,10 +2,11 @@ from os import environ
 from dotenv import load_dotenv
 from uvicorn import run
 from strawberry.asgi import GraphQL
+from asgi_cors_strawberry import CorsMiddleware
 from src.schema import schema
 
 load_dotenv()
-app = GraphQL(schema)
+app = CorsMiddleware(app=GraphQL(schema), allow_all=True)
 
 
 def main():

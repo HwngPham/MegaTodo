@@ -8,6 +8,7 @@ peewee = "*"
 strawberry-graphql = {extras = ["asgi"], version = "*"}
 uvicorn = "*"
 python-dotenv = "*"
+asgi-cors-strawberry = "*"
 
 [dev-packages]
 

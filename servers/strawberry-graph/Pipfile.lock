@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "83e5e015d63cd65dc3e42af761e9e0c7e57f8201d4377506ea2c6489a3f4b83d"
+            "sha256": "ecc6afa27c707f366018bc4349281ad9b0ff60684a5d8d95187f1cf341543910"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,13 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==3.7.0"
+        },
+        "asgi-cors-strawberry": {
+            "hashes": [
+                "sha256:39e41b025b5c67061938d1eff537b9266f1d82ffd0bc36aa07393b253aa25e2e"
+            ],
+            "index": "pypi",
+            "version": "==0.2.0"
         },
         "click": {
             "hashes": [
@@ -122,11 +129,11 @@
                 "asgi"
             ],
             "hashes": [
-                "sha256:169a13d115736b679fcfa8e36b7c5bfabaa552e2cabc5be4f8080fff99fc0a7e",
-                "sha256:29795af275a33e923ef88e20bd58136eb63b95bc358a7f8e7ec208e8959f70c7"
+                "sha256:6c9603dce5f0f852a1af784c4516a7cd2358aec598c1528ac97d4008bd211e77",
+                "sha256:8aca8db58036f924e79e869d4f8f6c25a0a4063124aa40742dfc9a62dc816f1b"
             ],
             "index": "pypi",
-            "version": "==0.184.0"
+            "version": "==0.186.1"
         },
         "typing-extensions": {
             "hashes": [
