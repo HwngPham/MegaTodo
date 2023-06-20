@@ -16,13 +16,9 @@ class TodoMutation:
         return create_todo(content=content, is_done=is_done)
 
     @strawberry.mutation
-    def update_todo(
-        self, find_by_content: str, content: str, is_done: bool = False
-    ) -> Todo:
-        return update_todo(
-            find_by_content=find_by_content, content=content, is_done=is_done
-        )
+    def update_todo(self, id: int, content: str, is_done: bool = False) -> Todo:
+        return update_todo(id=id, content=content, is_done=is_done)
 
     @strawberry.mutation
-    def delete_todo(self, content: str) -> Todo:
-        return delete_todo(content=content)
+    def delete_todo(self, id: int) -> Todo:
+        return delete_todo(id=id)

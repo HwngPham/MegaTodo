@@ -4,7 +4,7 @@ from ..configs.db import Todo as TodoModel
 
 
 def serialize(todo: TodoModel) -> Todo:
-    return Todo(content=todo.content, is_done=todo.is_done)
+    return Todo(id=todo.id, content=todo.content, is_done=todo.is_done)
 
 
 def get_all_todo() -> typing.List[Todo]:
@@ -17,15 +17,15 @@ def create_todo(content: str, is_done: bool = False) -> Todo:
     return serialize(todo)
 
 
-def update_todo(find_by_content: str, content: str, is_done: bool = False) -> Todo:
-    todo = TodoModel.get(TodoModel.content == find_by_content)
+def update_todo(id: int, content: str, is_done: bool = False) -> Todo:
+    todo = TodoModel.get_by_id(id)
     todo.content = content
     todo.is_done = is_done
     todo.save()
     return serialize(todo)
 
 
-def delete_todo(content: str) -> Todo:
-    todo = TodoModel.get(TodoModel.content == content)
+def delete_todo(id: int) -> Todo:
+    todo = TodoModel.get_by_id(id)
     todo.delete_instance()
     return serialize(todo)
