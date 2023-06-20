@@ -1,6 +1,0 @@
-query allTodo {
-	allTodo {
-		content
-		isDone
-	}
-}
