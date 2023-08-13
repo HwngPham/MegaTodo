@@ -1,23 +1,15 @@
 <script>
   import { SvelteUIProvider } from "@svelteuidev/core";
-  import TodoList from "./lib/TodoList.svelte";
-  import TodoInput from "./lib/TodoInput.svelte";
+  import TodoList from "./lib/components/TodoList.svelte";
+  import TodoInput from "./lib/components/TodoInput.svelte";
+  import { createTodo, fetchTodoList } from "./lib/services/todoService";
+  import { onMount } from "svelte";
 
-  let todoItems = [
-    { id: 1, content: "create foo", isDone: false },
-    { id: 2, content: "create bar", isDone: false },
-    { id: 3, content: "create buzz", isDone: true },
-  ];
+  let todoItems = [];
 
-  const handleInputSubmit = (content) => {
-    todoItems = [
-      ...todoItems,
-      {
-        id: todoItems.length + 1,
-        content,
-        isDone: false,
-      },
-    ];
+  const handleInputSubmit = async (content) => {
+    const todo = await createTodo(content);
+    todoItems = [...todoItems, todo];
   };
 
   const handleDelete = (item) => {
@@ -26,6 +18,10 @@
   };
 
   const log = () => console.table(todoItems);
+
+  onMount(async () => {
+    todoItems = await fetchTodoList();
+  });
 </script>
 
 <SvelteUIProvider themeObserver="dark">

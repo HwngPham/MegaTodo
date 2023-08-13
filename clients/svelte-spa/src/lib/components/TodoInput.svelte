@@ -4,6 +4,7 @@
   let input = "";
 
   const handleSubmit = () => {
+    if (!input) return;
     onSubmit(input);
     input = "";
   };
