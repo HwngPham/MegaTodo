@@ -12,5 +12,14 @@
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "svelte": "^4.0.5",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@svelteuidev/composables": "^0.14.0",
+    "@svelteuidev/core": "^0.14.0",
+    "@svelteuidev/dates": "^0.14.0",
+    "@svelteuidev/motion": "^0.14.0",
+    "@svelteuidev/preprocessors": "^0.14.0",
+    "@svelteuidev/prism": "^0.14.0",
+    "dayjs": "^1.11.9"
   }
 }
