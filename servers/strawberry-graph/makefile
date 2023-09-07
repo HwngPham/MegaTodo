@@ -9,3 +9,6 @@ image:
 
 container:
 	docker run -dp 80:8000 strawberry-graph
+
+schema:
+	strawberry export-schema src.schema:schema --output schema.graphql

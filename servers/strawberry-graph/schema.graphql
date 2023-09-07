@@ -1,0 +1,25 @@
+schema {
+  query: RootQuery
+  mutation: TodoMutation
+}
+
+type Health {
+  status: String!
+}
+
+type RootQuery {
+  allTodo: [Todo!]!
+  health: Health!
+}
+
+type Todo {
+  id: Int
+  content: String!
+  isDone: Boolean!
+}
+
+type TodoMutation {
+  createTodo(content: String!, isDone: Boolean! = false): Todo!
+  updateTodo(id: Int!, content: String!, isDone: Boolean! = false): Todo!
+  deleteTodo(id: Int!): Todo!
+}
